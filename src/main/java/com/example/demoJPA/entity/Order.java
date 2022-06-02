@@ -1,4 +1,4 @@
-package com.springExercise.entity;
+package com.example.demoJPA.entity;
 
 import java.io.Serializable;
 import java.util.Date;

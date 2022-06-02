@@ -1,7 +1,6 @@
-package com.springExercise.entity;
+package com.example.demoJPA.entity;
 
 import java.io.Serializable;
-import java.sql.Blob;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -10,70 +9,38 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import lombok.Data;
+
 @Entity
 @Table(name = "product")
+@Data
 public class Product implements Serializable {
 	@Id // 這是一個主鍵
 	@GeneratedValue(strategy = GenerationType.IDENTITY) // 自增主鍵
 	private Integer id;
 
-	@Column
+	@Column(name="name", insertable=false)
 	private String name;
 
-	@Column
+	@Column(name="location")
 	private String location;
 
-	@Column
+	@Column(name="descript")
 	private String descript;
-	@Column
+	@Column(name="price")
 	private Integer price;
-	@Column
+	@Column(name="unit")
 	private String unit;
 
 	@Column(name="imgPath")
 	private String imgPath;
-	
-	
-	
-	@Override
-	public String toString() {
-		return "Product [id=" + id + ", name=" + name + ", location=" + location + ", descript=" + descript + ", price="
-				+ price + ", unit=" + unit + ", imgPath=" + imgPath + "]";
-	}
-
-	public String getImgPath() {
-		return imgPath;
-	}
-
-	public void setImgPath(String imgPath) {
-		this.imgPath = imgPath;
-	}
 
 	public Integer getId() {
 		return id;
 	}
 
-
 	public void setId(Integer id) {
 		this.id = id;
-	}
-
-
-
-	public Integer getPrice() {
-		return price;
-	}
-
-	public void setPrice(Integer price) {
-		this.price = price;
-	}
-
-	public String getUnit() {
-		return unit;
-	}
-
-	public void setUnit(String unit) {
-		this.unit = unit;
 	}
 
 	public String getName() {
@@ -100,4 +67,29 @@ public class Product implements Serializable {
 		this.descript = descript;
 	}
 
+	public Integer getPrice() {
+		return price;
+	}
+
+	public void setPrice(Integer price) {
+		this.price = price;
+	}
+
+	public String getUnit() {
+		return unit;
+	}
+
+	public void setUnit(String unit) {
+		this.unit = unit;
+	}
+
+	public String getImgPath() {
+		return imgPath;
+	}
+
+	public void setImgPath(String imgPath) {
+		this.imgPath = imgPath;
+	}
+	
+	
 }

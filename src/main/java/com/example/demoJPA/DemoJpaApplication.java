@@ -1,14 +1,13 @@
-package com.springExercise;
+package com.example.demoJPA;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-
 @SpringBootApplication
-public class DataJpaHomeworkApplication {
+public class DemoJpaApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(DataJpaHomeworkApplication.class, args);
+		SpringApplication.run(DemoJpaApplication.class, args);
 	}
 
 }
